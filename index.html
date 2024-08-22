@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate Lines Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-4xl p-8 bg-gray-900 rounded-lg shadow-xl">
+        <h1 class="text-3xl font-extrabold text-center text-white mb-8">
+            Duplicate Lines Finder
+        </h1>
+        <div class="flex justify-between mb-6 text-white">
+            <p id="lineCount" class="text-sm font-medium">Total Lines: 0</p>
+            <p id="emptyCount" class="text-sm font-medium">Empty Lines: 0</p>
+        </div>
+        <textarea id="inputText" rows="8"
+            class="w-full p-4 border rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-400 placeholder-gray-500 text-gray-800 resize-none"
+            placeholder="Paste your text here..."></textarea>
+
+        <button id="findDuplicatesBtn"
+            class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-4 rounded-lg mt-6 hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-500">
+            Find Duplicates
+        </button>
+        <p id="result" class="text-center text-lg font-semibold mt-8"></p>
+        <div id="outputBox" class="hidden mt-6 p-4 bg-gray-50 border border-gray-200 rounded-lg shadow-inner">
+            <p id="outputText" class="text-gray-700 whitespace-pre-line"></p>
+            <div class="mt-4 text-right">
+                <button id="copyButton"
+                    class="bg-gradient-to-r from-green-400 to-green-600 text-white py-2 px-4 rounded-lg hover:from-green-500 hover:to-green-700 focus:outline-none focus:ring-4 focus:ring-green-400">
+                    Copy
+                </button>
+            </div>
+        </div>
+        <p id="error" class="text-red-500 text-center mt-4"></p>
+    </div>
+    <script src="script.js"> </script>
+</body>
+
+</html>
